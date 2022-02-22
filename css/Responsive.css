@@ -1,0 +1,57 @@
+@media (min-width:0px) and (max-width:991px) {
+    .nav-main ul {
+        background: tomato;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 300px;
+        display: block;
+        height: 100vh;
+        padding-left: 10px;
+    }
+    
+    .nav-main ul li {
+        margin-bottom: 40px;
+    }
+    
+    .nav-main ul li a:hover {
+        color: white;
+        transition: none;
+    }
+    .mobile {
+        transform: translate(-300px);
+        transition:all 1s;
+        position: relative;
+    }
+    .mobiles{
+        transform: translate(0px)!important;
+    }
+    #mobilebtn{
+        display: block!important;
+        color:white!important;
+        cursor:pointer;
+    }
+    .dropdown11{
+        position: relative;
+    }
+    .submenu-1 ul {
+        height: auto;
+        background: red;
+        position: static;
+        width: 289px;
+        padding: 10px 0px;
+        padding-left: 14px;
+        margin: 0px;
+        display: none;
+        transition: 1s;
+    }
+    .subshow{
+        display: block!important;
+    }
+    .tt{
+        color: white;
+        float: right;
+        margin: 10px;
+        cursor:pointer;
+    }
+}

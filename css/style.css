@@ -1,0 +1,21 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+.container-area {
+    background-color: #2196f3;
+    width: 650px;
+    text-align: center;
+    color: white;
+    height: 300px;
+    margin: auto;
+    padding: 20px 20px;
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+}
+input:focus{
+    outline:none;
+}
