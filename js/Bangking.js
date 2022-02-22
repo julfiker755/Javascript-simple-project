@@ -1,41 +1,48 @@
+function allvalue(inputid){
+   const depositinput=document.querySelector(inputid);
+   const depsitinputva=parseFloat(depositinput.value);
+   depositinput.value='';
+   return depsitinputva;
+}
+function amoutadd(inerid,depsitinputv){
+ const depostwidthtotal=document.querySelector(inerid);
+ const deposwidthcon=parseFloat(depostwidthtotal.innerText);
+ const depostwidthupdate=deposwidthcon+depsitinputv;
+ depostwidthtotal.innerHTML=depostwidthupdate;
+
+}
+function balance(widthdrowval,adda){
+ if(adda==true){
+   const totalbalance=document.querySelector(".balance-total");
+   const totalbalancecon=parseFloat(totalbalance.innerHTML);
+   const totalbal=totalbalancecon+widthdrowval;
+   totalbalance.innerHTML=totalbal;
+ }else{
+   const totalbalance=document.querySelector(".balance-total");
+   const totalbalancecon=parseFloat(totalbalance.innerHTML);
+   const totalbal=totalbalancecon-widthdrowval;
+   totalbalance.innerHTML=totalbal;
+ }
+}
+
 const depositbtn=document.querySelector("#deposit");
 depositbtn.addEventListener("click",function(){
-   //deposit button
-  const depositinput=document.querySelector("#deposit-input");
-  const depositv=depositinput.value;
-  const depositvc=parseFloat(depositv);
-  const depostotal=document.querySelector(".diposit-total");
-  const depostotalv=depostotal.innerText;
-  const depositotalc=parseFloat(depostotalv);
-  const depositotall=depositotalc+depositvc;
-  depostotal.innerHTML=depositotall;
-  //deposit strigs start
-  depositinput.value='';
-  //balance total right
-  const totalbal=document.querySelector(".balance-total");
-  const totalbalv=totalbal.innerHTML;
-  const totalbalcon=parseFloat(totalbalv);
-  const totalbalset=totalbalcon+depositvc;
-  totalbal.innerHTML=totalbalset;
-
-
-})
-//widthdrow button
-const widthdrow=document.querySelector("#widthdrow");
-widthdrow.addEventListener("click",function(){
-   const windowinput=document.querySelector("#windrow-input");
-   const windowinputvalue=windowinput.value;
-   const windowinputvaluec=parseFloat(windowinputvalue);
-   const windowtotal=document.querySelector("#widthdrow-total");
-   const windowtotalText=windowtotal.innerText;
-   const windowtotalTextc=parseFloat(windowtotalText);
-   const widthdrowtotal=windowtotalTextc+windowinputvaluec;
-   windowtotal.innerHTML=widthdrowtotal;
-   windowinput.value='';
-   //window balce
-   const totalbal=document.querySelector(".balance-total");
-   const totalbalv=totalbal.innerHTML;
-   const totalbalcon=parseFloat(totalbalv);
-   const totalwindowset=totalbalcon-windowinputvaluec;
-   totalbal.innerHTML=totalwindowset;
+ const depsitinputv=allvalue("#deposit-input");
+ if(depsitinputv >0){
+   amoutadd(".diposit-total",depsitinputv);
+   balance(depsitinputv,true);
+ }else{
+   window.alert("Your Balance negative amout")
+ }
+});
+const widthbtn=document.querySelector("#widthdrow");
+widthbtn.addEventListener("click",function(){
+  const widthdrowval=allvalue('#windrow-input');
+  if(widthdrowval>0){
+   amoutadd("#widthdrow-total",widthdrowval);
+   balance(widthdrowval,false);
+  }else{
+     window.alert("Your Balance negative amout")
+  }
+  
 })
