@@ -1,35 +1,51 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-  <title>Javascript Responsive menu</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Bootstrap CSS -->
-
-  <!--bootsrap css-->
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <!--main css-->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/Responsive.css">
-</head>
-<body>
-  <div class="container mt-1">
-    <div class="container-area">
-      <h1>My frist project Login from</h1>
-    <div class="login-box">
-      <form>
-        <label class="text-start">Enter Your Name</label>
-        <input type="text" name="name" id="user-name">
-        <label class="text-start mt-3">Enter Your password</label>
-        <input type="password" name="password" id="passwrod-name">
-        <button id="button" class="btn btn-danger mt-3">Submit</button>
-      </form>
-    </div>
-    </div>
+  <head>
+    <title>Javascript calculator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body style="background-color: rgba(0, 255, 34, 0.637);">
+    <div class="main">
+      <div class="container">
+      <div class="divall">
+        <div id="input-area"><input type="text" id="type-input" placeholder="Your type"></div>
+        <div class="div1">
+            <button onclick=" calculator(1)">1</button>
+            <button onclick=" calculator(2)">2</button>
+            <button onclick=" calculator(3)">3</button>
+            <button id="clear-btn">c</button> 
+        </div>
+        <div class="div1">
+           <button onclick=" calculator(4)">4</button> 
+           <button onclick=" calculator(5)">5</button>
+           <button onclick=" calculator(6)">6</button>
+           <button onclick=" calculator('*')">*</button> 
+           
+        </div>
+        <div class="div1">
+           <button onclick=" calculator(7)">7</button> 
+           <button onclick=" calculator(8)">8</button>
+           <button onclick=" calculator(9)">9</button>
+           <button onclick=" calculator('+')">+</button> 
+        </div>
+        <div class="div1">
+           <button onclick=" calculator(0)">0</button> 
+           <button onclick=" calculator('-')">-</button>
+           <button onclick=" calculator('/')">/</button>
+           <button id="equal-btn">=</button> 
+           
+       </div>
+      </div>
+      </div>   
   </div>
-
-<script src="js/app.js"></script>
-</body>
+  
+  
+  
+    <!-- Optional JavaScript -->
+    <!-- Popper.js first, then Bootstrap JS -->
+    <script src="javascript.js"></script>
+  </body>
 </html>
