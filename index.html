@@ -1,47 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <title>Javascript Calculator</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-<header id="main-top">
-    <div class="container">
-        <div class="coundown">
-            <div class="days">
-                <h2 id="days">20</h2>
-                <h3>Days</h3>
-            </div>
-            <div class="days">
-                <h2 id="hours">4</h2>
-                <h3>Hours</h3>
-            </div>
-            <div class="days">
-                <h2 id="min">27</h2>
-                <h3>Minutes</h3>
-            </div>
-            <div class="days">
-                <h2 id="sec">45</h2>
-                <h3>Seconds</h3>
-            </div>
+  <head>
+    <title>Javascript calculator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body style="background-color: rgba(0, 255, 34, 0.637);">
+    <div class="main">
+      <div class="container">
+      <div class="divall">
+        <div id="input-area"><input type="text" id="type-input" placeholder="Your type"></div>
+        <div class="div1">
+            <button onclick=" calculator(1)">1</button>
+            <button onclick=" calculator(2)">2</button>
+            <button onclick=" calculator(3)">3</button>
+            <button id="clear-btn">c</button> 
         </div>
-    <div class="conunder">
-        <div class="cound-text">
-            <h2 id="cound">0</h2>
+        <div class="div1">
+           <button onclick=" calculator(4)">4</button> 
+           <button onclick=" calculator(5)">5</button>
+           <button onclick=" calculator(6)">6</button>
+           <button onclick=" calculator('*')">*</button> 
+           
         </div>
-    </div>
-    </div>
-</header>    
-
-
-
-
-
-
-<!-- script file -->
-<script src="./js/app.js"></script>
-</body>
+        <div class="div1">
+           <button onclick=" calculator(7)">7</button> 
+           <button onclick=" calculator(8)">8</button>
+           <button onclick=" calculator(9)">9</button>
+           <button onclick=" calculator('+')">+</button> 
+        </div>
+        <div class="div1">
+           <button onclick=" calculator(0)">0</button> 
+           <button onclick=" calculator('-')">-</button>
+           <button onclick=" calculator('/')">/</button>
+           <button id="equal-btn">=</button> 
+           
+       </div>
+      </div>
+      </div>   
+  </div>
+  
+  
+  
+    <!-- Optional JavaScript -->
+    <!-- Popper.js first, then Bootstrap JS -->
+    <script src="javascript.js"></script>
+  </body>
 </html>
