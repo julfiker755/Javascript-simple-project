@@ -7,8 +7,8 @@ function calculator(num){
 const equalbtn=document.querySelector("#equal-btn");
 equalbtn.addEventListener("click",function(){
  const equalnum=document.querySelector("#type-input").value;
- const toalnum=eval(equalnum);
- document.querySelector("#type-input").value=toalnum;
+ const totalnum=eval(equalnum);
+ document.querySelector("#type-input").value=totalnum;
 })
 
 const clearbtn=document.querySelector("#clear-btn");
