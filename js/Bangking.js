@@ -33,6 +33,7 @@ depositbtn.addEventListener("click",function(){
    balance(depsitinputv,true);
  }else{
    window.alert("Your Balance negative amout")
+   
  }
 });
 const widthbtn=document.querySelector("#widthdrow");
@@ -46,3 +47,38 @@ widthbtn.addEventListener("click",function(){
   }
   
 })
+
+//banck  start code
+//-----------------------------------------------------------------
+//index.html code
+ <button onclick="addcard('deposit-input','diposit-total',true)" class="btn btn-danger">Deposit</button>
+<button onclick="addcard('windrow-input','widthdrow-total',false)" class="btn btn-danger">Windrow</button>
+//-----------------------------------------------------------------
+
+//How to your project Easy short code you account
+function addcard(diposit,totalid,add){
+//input value
+ let inputname=document.getElementById(diposit)
+ let inputvalue=parseFloat(inputname.value);
+ //How to your empty value
+ inputname.value="";
+ //how tw dipost and windows banance
+ let outputval=document.getElementById(totalid)
+ let outputvall=parseFloat(outputval.innerHTML);
+ let totaloutput=outputvall+inputvalue;
+ outputval.innerHTML=totaloutput;
+ //up the totalbanance
+ if(add){
+    let totalbanance=document.querySelector(".balance-total")
+    let totalbananceval=parseFloat(totalbanance.innerHTML);
+    let totalbanval=totalbananceval+inputvalue;
+    totalbanance.innerHTML=totalbanval
+ }else{
+    let totalbanance=document.querySelector(".balance-total")
+    let totalbananceval=parseFloat(totalbanance.innerHTML);
+    let totalbanval=totalbananceval-inputvalue;
+    totalbanance.innerHTML=totalbanval
+ }
+}
+//banck  end code
+
